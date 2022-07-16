@@ -4,6 +4,7 @@ const Home = () => import("@/views/Home.vue");
 const DestinationShow = () => import("@/views/DestinationShow.vue");
 const CrewShow = () => import("@/views/CrewShow.vue");
 const TechnologyShow = () => import("@/views/TechnologyShow.vue");
+const NotFound = () => import("@/views/NotFound.vue");
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     path: "/technology",
     name: "Technology",
     component: TechnologyShow,
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: NotFound,
   },
 ];
 
