@@ -12,7 +12,7 @@
         >
       </li>
       <li>
-        <router-link to="/"
+        <router-link to="/crew"
           ><span aria-hidden="true">02</span> Crew</router-link
         >
       </li>
