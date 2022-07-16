@@ -7,7 +7,7 @@
         >
       </li>
       <li>
-        <router-link to="/"
+        <router-link to="/destination"
           ><span aria-hidden="true">01</span> Destination</router-link
         >
       </li>
