@@ -17,7 +17,7 @@
         >
       </li>
       <li>
-        <router-link to="/"
+        <router-link to="/technology"
           ><span aria-hidden="true">03</span> Technology</router-link
         >
       </li>
