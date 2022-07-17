@@ -1,7 +1,7 @@
 :root {
   --clr-black: hsl(230, 35%, 7%);
   --clr-white: hsl(0, 0%, 100%);
-  --clr-primary: hsl(231, 77%, 90%);
+  --clr-primary: hwb(231 82% 2%);
 
   --fm-serif: "Bellefair", serif;
   --fm-sans: "Barlow", sans-serif;
@@ -32,14 +32,6 @@ body {
   box-sizing: border-box;
 }
 
-nav {
-  font-family: var(--fm-sans-condensed);
-  font-size: 1.6rem;
-  line-height: 19px;
-  letter-spacing: 2.7px;
-  text-transform: uppercase;
-}
-
 a:link,
 a:visited {
   color: inherit;
@@ -56,6 +48,10 @@ button {
 
 ul {
   list-style-type: none;
+}
+
+svg {
+  pointer-events: none;
 }
 
 .heading--1 {
@@ -105,4 +101,22 @@ ul {
   line-height: 17px;
   letter-spacing: 2.3625px;
   text-transform: uppercase;
+}
+
+.navbar {
+  font-family: var(--fm-sans-condensed);
+  font-size: 1.6rem;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+
+.navbar__link-list li a span {
+  font-weight: 700;
+  margin-inline-end: 1.2rem;
+}
+
+.navbar__link-list li a {
+  position: relative;
+  outline: none;
 }
