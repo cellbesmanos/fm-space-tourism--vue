@@ -54,6 +54,10 @@ button {
   cursor: pointer;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .heading--1 {
   font-family: var(--fm-serif);
   font-size: 15rem;
