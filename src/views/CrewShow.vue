@@ -1,13 +1,13 @@
 <template>
   <article>
-    <section class="carousell-ellipsis">
-      <ul class="carousell-ellipsis__controls">
+    <section class="carousel-ellipsis">
+      <ul class="carousel-ellipsis__controls">
         <li v-for="{ name } in crews" :key="name">
           <button
-            class="carousell-ellipsis__control"
+            class="carousel-ellipsis__control"
             @click="toggleActiveCrew(name)"
             :class="{
-              'carousell-ellipsis__control--active': name === activeCrew,
+              'carousel-ellipsis__control--active': name === activeCrew,
             }"
             type="button"
             :aria-label="name"
@@ -46,13 +46,13 @@ function toggleActiveCrew(name) {
 </script>
 
 <style>
-.carousell-ellipsis__controls {
+.carousel-ellipsis__controls {
   display: flex;
   align-items: center;
   gap: 2.4rem;
 }
 
-.carousell-ellipsis__control {
+.carousel-ellipsis__control {
   --size: 1.5rem;
 
   width: var(--size);
@@ -65,12 +65,12 @@ function toggleActiveCrew(name) {
   transition: opacity 0.2s ease-in-out;
 }
 
-.carousell-ellipsis__control:hover,
-.carousell-ellipsis__control:focus {
+.carousel-ellipsis__control:hover,
+.carousel-ellipsis__control:focus {
   opacity: 0.5;
 }
 
-.carousell-ellipsis__control.carousell-ellipsis__control--active {
+.carousel-ellipsis__control.carousel-ellipsis__control--active {
   opacity: 1;
 }
 </style>

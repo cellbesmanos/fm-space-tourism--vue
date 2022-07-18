@@ -1,13 +1,13 @@
 <template>
   <article>
-    <section class="carousell">
-      <ul class="underlined-control-list carousell__controls">
+    <section class="carousel">
+      <ul class="underlined-control-list carousel__controls">
         <li v-for="{ name } in destinations" :key="name">
           <button
             @click="toggleActiveDestination(name)"
-            class="carousell__control-btn"
+            class="carousel__control-btn"
             :class="{
-              'carousell__control-btn--active': name === activeDestination,
+              'carousel__control-btn--active': name === activeDestination,
             }"
             type="button"
           >
@@ -48,14 +48,14 @@ function toggleActiveDestination(name) {
 </script>
 
 <style>
-.carousell__controls {
+.carousel__controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 20.8rem;
 }
 
-.carousell__control-btn {
+.carousel__control-btn {
   position: relative;
   padding-block-end: 1.2rem;
 
@@ -68,7 +68,7 @@ function toggleActiveDestination(name) {
   letter-spacing: inherit;
 }
 
-.carousell__control-btn::after {
+.carousel__control-btn::after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -83,12 +83,12 @@ function toggleActiveDestination(name) {
   transform-origin: center;
 }
 
-.carousell__control-btn:hover::after,
-.carousell__control-btn:focus::after {
+.carousel__control-btn:hover::after,
+.carousel__control-btn:focus::after {
   transform: scaleX(1);
 }
 
-.carousell__control-btn--active::after {
+.carousel__control-btn--active::after {
   opacity: 1;
 }
 </style>

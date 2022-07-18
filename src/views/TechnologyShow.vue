@@ -1,13 +1,13 @@
 <template>
   <article>
-    <section class="carousell-numbered">
-      <ul class="carousell-numbered__controls">
+    <section class="carousel-numbered">
+      <ul class="carousel-numbered__controls">
         <li v-for="(technology, index) in technologies" :key="technology.name">
           <button
             @click="toggleActiveTechnology(technology.name)"
-            class="carousell-numbered__control"
+            class="carousel-numbered__control"
             :class="{
-              'carousell-numbered__control--active':
+              'carousel-numbered__control--active':
                 technology.name === activeTechnology,
             }"
             type="button"
@@ -50,7 +50,7 @@ function toggleActiveTechnology(name) {
 </script>
 
 <style>
-.carousell-numbered__controls {
+.carousel-numbered__controls {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,7 +58,7 @@ function toggleActiveTechnology(name) {
   gap: 3.2rem;
 }
 
-.carousell-numbered__control {
+.carousel-numbered__control {
   --size: 8rem;
   width: var(--size);
   height: var(--size);
@@ -73,12 +73,12 @@ function toggleActiveTechnology(name) {
   transition: all 0.2s ease-in-out;
 }
 
-.carousell-numbered__control:hover,
-.carousell-numbered__control:focus {
+.carousel-numbered__control:hover,
+.carousel-numbered__control:focus {
   border-color: var(--clr-white);
 }
 
-.carousell-numbered__control--active {
+.carousel-numbered__control--active {
   color: var(--clr-black);
   background-color: var(--clr-white);
 }
