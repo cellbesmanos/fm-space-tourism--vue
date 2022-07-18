@@ -24,7 +24,7 @@ html {
 body {
   font-family: var(--fm-sans);
   font-size: 1.8rem;
-  color: var(--clr-white);
+  color: var(--clr-primary);
   line-height: 32px;
 
   background-color: var(--clr-black);
@@ -54,16 +54,24 @@ svg {
   pointer-events: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .heading--1 {
   font-family: var(--fm-serif);
   font-size: 15rem;
   line-height: 172px;
+  text-transform: uppercase;
+  color: var(--clr-white);
 }
 
 .heading--2 {
   font-family: var(--fm-serif);
   font-size: 10rem;
   line-height: 115px;
+  text-transform: uppercase;
+  color: var(--clr-white);
 }
 
 .heading--3 {
@@ -93,6 +101,7 @@ svg {
   font-size: 2.8rem;
   line-height: 32px;
   text-transform: uppercase;
+  color: var(--clr-white);
 }
 
 .sub-heading--2 {
@@ -101,6 +110,7 @@ svg {
   line-height: 17px;
   letter-spacing: 2.3625px;
   text-transform: uppercase;
+  color: var(--clr-primary);
 }
 
 .underlined-control-list {
