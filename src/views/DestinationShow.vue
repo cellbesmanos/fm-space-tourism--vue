@@ -10,6 +10,13 @@
 
 <script setup>
 import Destination from "@/components/Destination.vue";
+import { onMounted } from "vue";
+
+onMounted(() => {
+  const body = document.querySelector("body");
+
+  body.classList.add("destination-view");
+});
 </script>
 
 <style>

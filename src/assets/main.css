@@ -22,14 +22,33 @@ html {
 }
 
 body {
+  min-height: 100vh;
   font-family: var(--fm-sans);
   font-size: 1.8rem;
   color: var(--clr-primary);
   line-height: 32px;
 
-  background-color: var(--clr-black);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   box-sizing: border-box;
+}
+
+body.destination-view {
+  background-image: url("/assets/destination/background-destination-mobile.jpg");
+}
+
+@media screen and (min-width: 31.25em) {
+  body.destination-view {
+    background-image: url("/assets/destination/background-destination-tablet.jpg");
+  }
+}
+
+@media screen and (min-width: 56.25em) {
+  body.destination-view {
+    background-image: url("/assets/destination/background-destination-desktop.jpg");
+  }
 }
 
 a:link,
