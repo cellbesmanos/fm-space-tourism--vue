@@ -103,6 +103,7 @@ function handleOpenModal() {
 @media screen and (min-width: 40.625em) {
   .navbar {
     --margin-top: 0;
+    --margin-bottom: 4rem;
     --padding-left: 3.9rem;
     --font-size: 1.4rem;
     --letter-spacing: 2.7px;
@@ -115,6 +116,7 @@ function handleOpenModal() {
     letter-spacing: var(--letter-spacing);
 
     margin-block-start: var(--margin-top);
+    margin-block-end: var(--margin-bottom);
     padding: 0;
     padding-inline-start: var(--padding-left);
   }

@@ -86,6 +86,32 @@ function toggleActiveDestination(name) {
   max-width: 17rem;
 }
 
+@media screen and (min-width: 40em) {
+  .destination {
+    padding-block-end: 6.2rem;
+
+    line-height: 25px;
+  }
+
+  .destination__img {
+    margin-block-end: 5.3rem;
+    max-width: 30rem;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .destination {
+    gap: 15.7rem;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .destination__img {
+    margin-block-end: unset;
+    max-width: 44.5rem;
+  }
+}
+
 .destination__img > img {
   object-fit: contain;
 }
@@ -102,6 +128,13 @@ function toggleActiveDestination(name) {
   justify-content: space-between;
   gap: 2.7rem;
   margin-block-end: 2rem;
+  color: var(--clr-primary);
+}
+
+@media screen and (min-width: 75em) {
+  .destination__controls {
+    align-self: flex-start;
+  }
 }
 
 .destination__control-btn {
@@ -148,6 +181,10 @@ function toggleActiveDestination(name) {
   opacity: 1;
 }
 
+.destination__content {
+  max-width: 57.3rem;
+}
+
 .destination__description {
   padding-block-end: 3.2rem;
   border-bottom: 1px solid hsl(231, 15%, 26%);
@@ -173,5 +210,47 @@ function toggleActiveDestination(name) {
 .destination__more-info p span {
   display: block;
   margin-block-end: 1.2rem;
+}
+
+@media screen and (min-width: 40em) {
+  .destination__description {
+    padding-block-end: 4.9rem;
+  }
+
+  .destination__description h2 {
+    font-size: 8rem;
+  }
+
+  .destination__description p {
+    font-size: 1.6rem;
+  }
+
+  .destination__more-info {
+    gap: 10rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-block-start: 2.9rem;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .destination__content {
+    max-width: 47.2rem;
+  }
+
+  .destination__description h2 {
+    font-size: 10rem;
+  }
+
+  .destination__description p {
+    font-size: 1.8rem;
+  }
+
+  .destination__more-info {
+    gap: 7rem;
+    justify-content: flex-start;
+    margin-block-start: 2.9rem;
+  }
 }
 </style>

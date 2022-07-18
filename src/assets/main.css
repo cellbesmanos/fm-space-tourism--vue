@@ -114,6 +114,7 @@ img {
 }
 
 .underlined-control-list {
+  color: var(--clr-white);
   font-family: var(--fm-sans-condensed);
   font-size: 1.6rem;
   line-height: 19px;
