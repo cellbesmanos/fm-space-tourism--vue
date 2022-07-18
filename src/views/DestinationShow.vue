@@ -89,6 +89,7 @@ function toggleActiveDestination(name) {
 }
 
 .carousel__control-btn--active::after {
+  transform: scaleX(1);
   opacity: 1;
 }
 </style>
