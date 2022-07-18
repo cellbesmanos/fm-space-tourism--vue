@@ -35,6 +35,22 @@ body {
   box-sizing: border-box;
 }
 
+body.home-view {
+  background-image: url("/assets/home/background-home-mobile.jpg");
+}
+
+@media screen and (min-width: 31.25em) {
+  body.home-view {
+    background-image: url("/assets/home/background-home-tablet.jpg");
+  }
+}
+
+@media screen and (min-width: 56.25em) {
+  body.home-view {
+    background-image: url("/assets/home/background-home-desktop.jpg");
+  }
+}
+
 body.destination-view {
   background-image: url("/assets/destination/background-destination-mobile.jpg");
 }
