@@ -20,12 +20,16 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, onUnmounted } from "vue";
+
+const body = document.querySelector("body");
 
 onMounted(() => {
-  const body = document.querySelector("body");
-
   body.classList.add("home-view");
+});
+
+onUnmounted(() => {
+  body.classList.remove("home-view");
 });
 </script>
 

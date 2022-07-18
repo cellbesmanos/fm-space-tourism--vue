@@ -10,12 +10,15 @@
 
 <script setup>
 import Destination from "@/components/Destination.vue";
-import { onMounted } from "vue";
+import { onMounted, onUnmounted } from "vue";
+const body = document.querySelector("body");
 
 onMounted(() => {
-  const body = document.querySelector("body");
-
   body.classList.add("destination-view");
+});
+
+onUnmounted(() => {
+  body.classList.remove("destination-view");
 });
 </script>
 
