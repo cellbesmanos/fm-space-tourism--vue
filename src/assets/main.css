@@ -103,7 +103,7 @@ svg {
   text-transform: uppercase;
 }
 
-.navbar {
+.underlined-control-list {
   font-family: var(--fm-sans-condensed);
   font-size: 1.6rem;
   line-height: 19px;

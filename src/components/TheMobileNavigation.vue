@@ -1,11 +1,11 @@
 <template>
   <transition name="slide">
-    <div v-if="props.show" class="navbar navbar--mobile">
+    <div v-if="props.show" class="underlined-control-list navbar-mobile">
       <button
         @click="$emit('closeModal')"
         aria-label="close mobile nagivation"
         type="button"
-        class="navbar--mobile__close"
+        class="navbar-mobile__close"
       >
         <svg
           aria-hidden="true"
@@ -56,7 +56,7 @@ const props = defineProps({
 </script>
 
 <style>
-.navbar--mobile {
+.navbar-mobile {
   position: absolute;
   top: 0;
   right: 0;
@@ -68,13 +68,13 @@ const props = defineProps({
 }
 
 @supports (backdrop-filter: blur) {
-  .navbar--mobile {
+  .navbar-mobile {
     background-color: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(81.5485px);
   }
 }
 
-.navbar--mobile__close {
+.navbar-mobile__close {
   position: absolute;
   top: 3.4rem;
   right: 2.4rem;
@@ -83,8 +83,8 @@ const props = defineProps({
   transition: border-color 0.2s ease-in-out;
 }
 
-.navbar--mobile__close:hover,
-.navbar--mobile__close:focus {
+.navbar-mobile__close:hover,
+.navbar-mobile__close:focus {
   border-color: white;
 }
 

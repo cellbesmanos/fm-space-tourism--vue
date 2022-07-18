@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar">
+  <nav class="navbar underlined-control-list">
     <svg
       class="navbar__logo"
       xmlns="http://www.w3.org/2000/svg"
