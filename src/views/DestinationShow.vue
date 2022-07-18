@@ -1,11 +1,14 @@
 <template>
   <article>
-    <section>
-      <ul>
+    <section class="carousell">
+      <ul class="underlined-control-list carousell__controls">
         <li v-for="{ name } in destinations" :key="name">
           <button
             @click="toggleActiveDestination(name)"
-            :class="{ active: name === activeDestination }"
+            class="carousell__control-btn"
+            :class="{
+              'carousell__control-btn--active': name === activeDestination,
+            }"
             type="button"
           >
             {{ name }}
@@ -45,7 +48,47 @@ function toggleActiveDestination(name) {
 </script>
 
 <style>
-.active {
-  border: 1px solid red;
+.carousell__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 20.8rem;
+}
+
+.carousell__control-btn {
+  position: relative;
+  padding-block-end: 1.2rem;
+
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+.carousell__control-btn::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  width: 100%;
+  height: 0.3rem;
+  background-color: var(--clr-white);
+  opacity: 0.5;
+  content: "";
+
+  transition: transform 0.2s ease-in-out;
+  transform-origin: center;
+}
+
+.carousell__control-btn:hover::after,
+.carousell__control-btn:focus::after {
+  transform: scaleX(1);
+}
+
+.carousell__control-btn--active::after {
+  opacity: 1;
 }
 </style>
